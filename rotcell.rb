@@ -1,23 +1,24 @@
 #! ruby
 
 rot_cells = Array.new(5){|i| 
-	Array.new(5){|j|
-		("a".ord + (i*5) + j).chr  
-		}
-	}
+  Array.new(5){|j|
+    ("a".ord + (i*5) + j).chr  
+    }
+  }
 
 
 
-ARGV[0].each do |char|
+ARGV[0].chars.each do |char|
   arr = []
-  upper? = false
+  is_upper = false
 
   rot_cells.each_with_index do |r,i|
     r.each_with_index do |c,j|
       if c == char.downcase 
         arr = [i,j]
-        upper? = !(c == char)
+        is_upper = !(c == char)
       end
+    end
   end  
 
   pos = [[0,1],[1,1],[1,0],[1,-1][0,-1],[-1,-1],[-1,0],[-1,1]]
@@ -26,7 +27,7 @@ ARGV[0].each do |char|
 
   moved = pos.dup
 
-  if !upper?
+  if !is_upper
     tmp = moved.shift
     moved.push(tmp)
   else
