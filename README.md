@@ -6,6 +6,7 @@ http://nabetani.sakura.ne.jp/yokohamarb/2014.10.rotcell/
 
 http://yokohamarb.doorkeeper.jp/events/14228
 
+[![wercker status](https://app.wercker.com/status/e97684e741058c49e1454f3bd0b73fa8/m "wercker status")](https://app.wercker.com/project/bykey/e97684e741058c49e1454f3bd0b73fa8)
 
 How to run
 ==========
